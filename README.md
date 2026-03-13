@@ -16,4 +16,5 @@ Dummy ledger is completely randomized ledger, that is it is dummy ledger with co
 Debit & credit side are simply mirrored, that is first debit side is created and then just mirrored by credit side.
 <br/>
 <br/>
-## 2. Randomized Patients General Information Dataset
+## 2. Randomized Medical General Information Dataset
+### Hospitals, Patients & Doctors Randomized Dummy Data

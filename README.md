@@ -23,3 +23,9 @@ Even although this data is completely randomized, there is combination of `hospi
 <br/>
 ## 2. Randomized Users Dataset
 This randomized dataset creation includes random user's name, last name & email address.
+<br/>
+For this randomized dataset creation Snowflake Snowpark was used, as well as randomuser API (https://randomuser.me/).
+<br/>
+Random user API has an maximum of 5000 returned records per call, so this code will generate 5000 random users, where name, surname and email will be generated. Data is then stored in relevant Snowflake table from where it can be further accessed.
+<br/>
+Connection details are stored in connections folder (make sure to create .env), and Snowpark & Python code are in dummy_user folder.

@@ -27,6 +27,7 @@ Database architecture with column names, and PRIMARY/FOREIGN KEYS is as shown be
 </p>
 <br/>
 <br/>
+
 ## 3. Randomized Users Dataset
 This randomized dataset creation includes random user's name, last name & email address.
 <br/>

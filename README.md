@@ -41,7 +41,7 @@ The database architecture, including the column names and the defined `PRIMARY K
 </p>
 <br/>
 <br/>
-Please keep in mind that for this beta version name, surname and email are populated using dummy user table (section 3), so make sure that that table is created before creating dummy doctor and dummy_patient data.
+Please note that in this beta version, the name, surname, and email fields are populated from the dummy user table (see section 3). Ensure that this table is created before adding any dummy doctor or patient data.
 <br/>
 <br/>
 The order in which tables should be created is as follows:

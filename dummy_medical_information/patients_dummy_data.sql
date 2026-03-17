@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS dummy_patient_information (
     "date_of_birth" DATE,
     "blood_type" VARCHAR(3),
     "phone_number"  VARCHAR(20),
-    "email" VARCHAR(30),
+    "email" VARCHAR(50),
     "address" VARCHAR(30),
     "city" VARCHAR(30),
     "country" VARCHAR(30),
@@ -168,6 +168,11 @@ SELECT
         UNIFORM(1, 28, RANDOM())
     )
 FROM TABLE(GENERATOR(ROWCOUNT => $number_of_rows_to_be_generated));
+
+--Populate name, surname & email using dummy user data table
+UPDATE dummy_patient_information a
+    SET a."first_name" = b."first_name" , a."last_name" = b."last_name" , a."email" = b."email"
+FROM dummy_user_data b;
 
 --Result
 SELECT * FROM dummy_patient_information;

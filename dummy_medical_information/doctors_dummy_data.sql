@@ -130,7 +130,7 @@ FROM TABLE(GENERATOR(ROWCOUNT => $number_of_rows_to_be_generated));
 --Populate name, surname & email using dummy user data table
 UPDATE dummy_doctor_information a
     SET a."first_name" = b."first_name" , a."last_name" = b."last_name" , a."email" = b."email"
-    FROM dummy_user_data b;
+FROM dummy_user_data b;
 
 --Result
 SELECT * FROM dummy_doctor_information;

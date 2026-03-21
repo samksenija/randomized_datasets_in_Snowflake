@@ -21,7 +21,8 @@ The dataset includes the following columns:
   "account_description" VARCHAR(50),
   "reference" VARCHAR(10),
   "debit" FLOAT,
-  "credit"  FLOAT`
+  "credit"  FLOAT
+  "accountant_id" INTEGER`
 <br/>
 <br/>
 The debit and credit values are mirrored. First, the debit entries are generated, and the corresponding credit values are created by mirroring those debit amounts.

@@ -1,8 +1,8 @@
 --Create database & schema
 --Use database & schema
-CREATE DATABASE dummy_datasets;
+CREATE DATABASE IF NOT EXISTS dummy_datasets;
 USE DATABASE dummy_datasets;
-CREATE SCHEMA schema_for_dummy_data;
+CREATE SCHEMA IF NOT EXISTS schema_for_dummy_data;
 USE SCHEMA schema_for_dummy_data;
 
 --Create dummy ledger table
@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS dummy_ledger_debit (
     "account_description" VARCHAR(50),
     "reference" VARCHAR(10),
     "debit" FLOAT,
-    "credit"  FLOAT
+    "credit"  FLOAT,
+    "accountant_id" INTEGER
 );
 
 --Set these values as variables so that they can be altered
@@ -57,7 +58,8 @@ SELECT
             )[UNIFORM(0, 29, RANDOM())],
     'REF' || UNIFORM(0, 999, RANDOM()),
     UNIFORM(0.1::FLOAT, $maximum_debit_credit_value::FLOAT, RANDOM()) as debit,
-    NULL
+    NULL,
+    UNIFORM(0, 999, RANDOM())
 FROM TABLE(GENERATOR(ROWCOUNT => $number_of_rows_to_be_generated));
 
 --Create credit side as debit side
